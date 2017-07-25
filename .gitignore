@@ -334,3 +334,6 @@ __pycache__/
 # ignore SDL libraries
 sdl_test/SDL2_lib/
 
+# resource directory
+sdl_test/res/
+

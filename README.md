@@ -5,6 +5,18 @@ windows/linux sdl test
 # コンパイル方法
 
 
+バイナリファイルのダウンロード
+
+https://drive.google.com/drive/folders/0B0aT3ne1hKVNUFp1WFlqN0tNTUE?usp=sharing
+
+
+解凍して下記フォルダに格納
+
+```
+{ProjectDir}/sdl_test/res/
+```
+
+
 ## Windows
 
 
