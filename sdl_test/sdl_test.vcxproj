@@ -70,8 +70,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LibraryPath>C:\Users\mgk\Documents\sdl_test\sdl_test\SDL2_lib\SDL2_image-2.0.1\lib\x86;C:\Users\mgk\Documents\sdl_test\sdl_test\SDL2_lib\SDL2-2.0.5\lib\x86;$(LibraryPath)</LibraryPath>
-    <IncludePath>C:\Users\mgk\Documents\sdl_test\sdl_test\SDL2_lib\SDL2_image-2.0.1\include;C:\Users\mgk\Documents\sdl_test\sdl_test\SDL2_lib\SDL2-2.0.5\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\mgk\Documents\sdl_test\sdl_test\SDL2_lib\SDL2_ttf-2.0.14\lib\x86;C:\Users\mgk\Documents\sdl_test\sdl_test\SDL2_lib\SDL2_image-2.0.1\lib\x86;C:\Users\mgk\Documents\sdl_test\sdl_test\SDL2_lib\SDL2-2.0.5\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\mgk\Documents\sdl_test\sdl_test\SDL2_lib\SDL2_ttf-2.0.14\include;C:\Users\mgk\Documents\sdl_test\sdl_test\SDL2_lib\SDL2_image-2.0.1\include;C:\Users\mgk\Documents\sdl_test\sdl_test\SDL2_lib\SDL2-2.0.5\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -80,7 +80,7 @@
       <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
     </Link>
   </ItemDefinitionGroup>
