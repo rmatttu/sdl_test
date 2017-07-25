@@ -1,8 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include "SDL.h"
-#include "SDL_image.h"
-#include "SDL_ttf.h"
+#include"SDL.h"
+#include"SDL_image.h"
+#include"SDL_ttf.h"
+#include"SDL_mixer.h"
 
 
 int main(int argc, char* args[]) {
@@ -10,6 +11,19 @@ int main(int argc, char* args[]) {
 	SDL_Window* window = SDL_CreateWindow("Hey", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 640, 480, 0);
 	SDL_Renderer* render = SDL_CreateRenderer(window, -1, 0);
 
+	//auto mix = Mix_OpenAudio(MIX_DEFAULT_FREQUENCY, MIX_DEFAULT_FORMAT, MIX_DEFAULT_CHANNELS, 1024);
+	auto mix = Mix_OpenAudio(44100, AUDIO_S16LSB, MIX_DEFAULT_CHANNELS, 1024);
+	if (mix != 0) {
+		return 2;
+	}
+	Mix_Music *music = Mix_LoadMUS("res/em.ogg");
+	if (music == nullptr) {
+		return 3;
+	}
+	Mix_PlayMusic(music, -1);
+
+
+	// âÊëú
 	SDL_Surface *image;
 	image = IMG_Load("res/bird_koruri.png");
 	if (!image) {
@@ -38,6 +52,7 @@ int main(int argc, char* args[]) {
 		// ÉCÉxÉìÉgÇÃèàóù
 		while (SDL_PollEvent(&ev))
 		{
+			
 			if (ev.type == SDL_QUIT) {
 
 				return 0;
@@ -45,6 +60,9 @@ int main(int argc, char* args[]) {
 		}
 		SDL_Delay(0);
 	}
+
+	Mix_FreeMusic(music);
+	Mix_CloseAudio();
 
 	return 0;
 }
