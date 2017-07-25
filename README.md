@@ -65,10 +65,16 @@ copy sdl_test\SDL2_lib\SDL2_ttf-2.0.14\lib\x86\SDL2_ttf.dll sdl_test\
 $ apt install libsdl2-dev
 ```
 
+* install libs
+
+```sh
+$ apt install libsdl2-image-dev libsdl2-ttf-dev
+```
+
 * compile main.cpp
 
 ```sh
-$ gcc main.cpp `sdl2-config --cflags --libs`
+$ gcc -std=c++14 main.cpp `sdl2-config --cflags --libs` -lSDL2_image
 ```
 
 
