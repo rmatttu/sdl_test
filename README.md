@@ -45,3 +45,19 @@ copy sdl_test\SDL2_lib\SDL2_ttf-2.0.14\lib\x86\SDL2_ttf.dll sdl_test\
 ```
 
 
+## linux
+
+* install SDL2.0
+
+```sh
+$ apt install libsdl2-dev
+```
+
+* compile main.cpp
+
+```sh
+$ gcc main.cpp `sdl2-config --cflags --libs`
+```
+
+
+
